@@ -1,6 +1,0 @@
-mkdir NodoUno
-cd NodoUno
-touch .gitkeep
-git add .
-git commit -m "Crear carpeta NodoUno"
-git push

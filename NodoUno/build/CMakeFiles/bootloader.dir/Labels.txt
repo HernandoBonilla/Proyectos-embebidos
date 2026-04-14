@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/jinet/nodoUno/build/CMakeFiles/bootloader
+C:/Users/jinet/nodoUno/build/CMakeFiles/bootloader.rule
+C:/Users/jinet/nodoUno/build/CMakeFiles/bootloader-complete.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/jinet/nodoUno/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

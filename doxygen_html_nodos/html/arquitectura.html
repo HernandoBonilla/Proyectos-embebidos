@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Arquitectura</title><style>
+body{font-family:Arial;max-width:1000px;margin:40px auto;line-height:1.5;padding:0 20px}
+code,pre{background:#f4f4f4;padding:2px 6px;border-radius:4px} pre{padding:12px}
+h1,h2{color:#1d3557}
+</style></head><body>
+<h1>Arquitectura del sistema</h1>
+<pre>
+Nodo 2 (pecho, batería)
+  MPU6050 -> clasificación -> paquete ESP-NOW
+                    |
+                    v
+Nodo 1 (central, PC)
+  pulso + IMU + RTC + LCD + receptor ESP-NOW
+                    |
+                    v
+              Puerto serial / PC
+</pre>
+
+<h2>Secuencia de integración</h2>
+<ol>
+<li>Documentar archivos con bloques Doxygen.</li>
+<li>Generar HTML local con Doxygen.</li>
+<li>Verificar comunicación Nodo 2 -> Nodo 1.</li>
+<li>Agregar documentación de tramas y estructuras compartidas.</li>
+</ol>
+</body></html>

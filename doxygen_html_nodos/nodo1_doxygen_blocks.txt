@@ -1,0 +1,53 @@
+/**
+ * @file main.c
+ * @brief Programa principal del Nodo 1.
+ * @details Inicializa periféricos locales, activa ESP-NOW como receptor,
+ * actualiza la pantalla y transmite una trama consolidada al PC.
+ */
+
+/**
+ * @brief Inicializa el modo receptor ESP-NOW.
+ * @details Configura NVS, netif, event loop, WiFi en modo STA y canal fijo.
+ */
+static void wifi_espnow_init_receiver(void);
+
+/**
+ * @brief Callback de recepción para paquetes del Nodo 2.
+ * @param info Información del emisor.
+ * @param data Buffer con el paquete recibido.
+ * @param len Longitud del paquete.
+ */
+static void on_recv_cb(const esp_now_recv_info_t *info, const uint8_t *data, int len);
+
+/**
+ * @brief Tarea de lectura del sensor de pulso.
+ */
+static void task_pulse(void *pv);
+
+/**
+ * @brief Tarea de lectura del IMU local.
+ */
+static void task_imu(void *pv);
+
+/**
+ * @brief Tarea de lectura del RTC.
+ */
+static void task_rtc(void *pv);
+
+/**
+ * @brief Tarea de envío por serial al PC.
+ * @details Genera una trama consolidada con datos locales y remotos.
+ */
+static void task_serial(void *pv);
+
+/**
+ * @brief Tarea de actualización de la pantalla LCD.
+ */
+static void task_display(void *pv);
+
+/**
+ * @brief Estructura global de datos del Nodo 1.
+ * @details Incluye variables fisiológicas, variables IMU locales y variables
+ * recibidas desde el Nodo 2.
+ */
+typedef struct app_data_t app_data_t;

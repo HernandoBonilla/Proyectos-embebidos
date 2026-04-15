@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Documentación Doxygen - Sistema de Dos Nodos</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:1000px;margin:40px auto;line-height:1.5;padding:0 20px}
+code,pre{background:#f4f4f4;padding:2px 6px;border-radius:4px}
+pre{padding:12px;overflow:auto}
+nav a{margin-right:16px}
+table{border-collapse:collapse;width:100%;margin:16px 0}
+th,td{border:1px solid #ccc;padding:8px;text-align:left}
+h1,h2,h3{color:#1d3557}
+.note{background:#eef7ff;border-left:4px solid #4c8bf5;padding:12px}
+</style>
+</head>
+<body>
+<h1>Documentación Doxygen - Sistema Distribuido de Dos Nodos</h1>
+<nav>
+<a href="nodo1.html">Nodo 1</a>
+<a href="nodo2.html">Nodo 2</a>
+<a href="arquitectura.html">Arquitectura</a>
+<a href="doxyfile.txt">Doxyfile</a>
+<a href="mainpage.md">mainpage.md</a>
+</nav>
+
+<p>Este paquete contiene una versión lista para usar de la documentación del sistema en estilo Doxygen para dos nodos:</p>
+<ul>
+<li><strong>Nodo 1:</strong> ESP32-S3 principal con LCD, RTC, pulso e IMU local.</li>
+<li><strong>Nodo 2:</strong> ESP32 portátil con MPU6050 en pecho.</li>
+</ul>
+
+<div class="note">
+<p><strong>Cómo generar HTML real con Doxygen:</strong></p>
+<ol>
+<li>Copia <code>Doxyfile</code>, <code>mainpage.md</code> y los bloques Doxygen a tu proyecto.</li>
+<li>Instala Doxygen.</li>
+<li>Ejecuta <code>doxygen Doxyfile</code>.</li>
+<li>Abre <code>docs/html/index.html</code>.</li>
+</ol>
+</div>
+
+<h2>Contenido del paquete</h2>
+<table>
+<tr><th>Archivo</th><th>Descripción</th></tr>
+<tr><td>Doxyfile</td><td>Configuración base para generar HTML con Doxygen.</td></tr>
+<tr><td>mainpage.md</td><td>Página principal de la documentación.</td></tr>
+<tr><td>nodo1_doxygen_blocks.txt</td><td>Bloques listos para pegar en los archivos del Nodo 1.</td></tr>
+<tr><td>nodo2_doxygen_blocks.txt</td><td>Bloques listos para pegar en los archivos del Nodo 2.</td></tr>
+<tr><td>html/*.html</td><td>Vista HTML estática de apoyo.</td></tr>
+</table>
+
+<h2>Archivos principales sugeridos</h2>
+<pre>
+proyecto/
+├── nodoUno/
+│   └── main/
+│       ├── main.c
+│       ├── app_data.h
+│       ├── common_packet.h
+│       ├── display/
+│       ├── pulse/
+│       ├── imu/
+│       ├── rtc/
+│       └── i2c_bus/
+└── nodoDos/
+    └── main/
+        ├── main.c
+        ├── app_data.h
+        ├── common_packet.h
+        ├── i2c_bus.c
+        ├── mpu6050.c
+        └── motion_detector.c
+</pre>
+
+<h2>Estados de movimiento</h2>
+<ul>
+<li>QUIETO</li>
+<li>DE_PIE</li>
+<li>ACOSTADO</li>
+<li>CAMINANDO</li>
+<li>CAIDA</li>
+<li>INDETERMINADO</li>
+</ul>
+
+</body>
+</html>

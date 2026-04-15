@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Nodo 2</title><style>
+body{font-family:Arial;max-width:1000px;margin:40px auto;line-height:1.5;padding:0 20px}
+code,pre{background:#f4f4f4;padding:2px 6px;border-radius:4px} pre{padding:12px}
+h1,h2{color:#1d3557}
+</style></head><body>
+<h1>Nodo 2 - ESP32 Pecho</h1>
+<p>Funciones principales:</p>
+<ul>
+<li>Lectura del MPU6050.</li>
+<li>Cálculo de pitch, roll, aceleración y giro total.</li>
+<li>Clasificación de postura o movimiento.</li>
+<li>Envío del paquete al Nodo 1 mediante ESP-NOW.</li>
+</ul>
+
+<h2>Archivos recomendados</h2>
+<pre>
+main.c
+app_data.h
+common_packet.h
+i2c_bus.c
+mpu6050.c
+motion_detector.c
+</pre>
+
+<h2>Bloque Doxygen de ejemplo para motion_detector.c</h2>
+<pre>
+/**
+ * @file motion_detector.c
+ * @brief Clasificador de estados de movimiento.
+ * @details
+ * Determina estados como QUIETO, DE_PIE, ACOSTADO, CAMINANDO y CAIDA
+ * a partir de las variables calculadas desde el MPU6050.
+ */
+</pre>
+</body></html>

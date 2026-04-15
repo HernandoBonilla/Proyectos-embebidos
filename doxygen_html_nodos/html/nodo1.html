@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Nodo 1</title><style>
+body{font-family:Arial;max-width:1000px;margin:40px auto;line-height:1.5;padding:0 20px}
+code,pre{background:#f4f4f4;padding:2px 6px;border-radius:4px} pre{padding:12px}
+h1,h2{color:#1d3557}
+</style></head><body>
+<h1>Nodo 1 - ESP32-S3 Central</h1>
+<p>Funciones principales:</p>
+<ul>
+<li>Lectura de pulso.</li>
+<li>Lectura IMU local QMI8658.</li>
+<li>Lectura RTC DS3231.</li>
+<li>Recepción de datos desde Nodo 2 por ESP-NOW.</li>
+<li>Visualización en LCD.</li>
+<li>Envío al PC por serial.</li>
+</ul>
+
+<h2>Archivos recomendados</h2>
+<pre>
+main.c
+app_data.h
+common_packet.h
+display/display.c
+pulse/pulse_sensor.c
+imu/qmi8658.c
+rtc/ds3231.c
+i2c_bus/i2c_bus.c
+</pre>
+
+<h2>Bloque Doxygen de ejemplo para main.c</h2>
+<pre>
+/**
+ * @file main.c
+ * @brief Programa principal del Nodo 1.
+ * @details
+ * Inicializa módulos locales, activa ESP-NOW como receptor y transmite
+ * una trama consolidada al PC por puerto serial.
+ */
+</pre>
+
+<h2>Datos recibidos del Nodo 2</h2>
+<ul>
+<li><code>pecho_ax_g</code>, <code>pecho_ay_g</code>, <code>pecho_az_g</code></li>
+<li><code>pecho_gx_dps</code>, <code>pecho_gy_dps</code>, <code>pecho_gz_dps</code></li>
+<li><code>pecho_pitch_deg</code>, <code>pecho_roll_deg</code></li>
+<li><code>pecho_accel_total_g</code>, <code>pecho_gyro_total_dps</code></li>
+<li><code>pecho_estado</code>, <code>pecho_caida</code>, <code>pecho_frame</code></li>
+</ul>
+</body></html>

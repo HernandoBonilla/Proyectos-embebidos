@@ -1,0 +1,39 @@
+/**
+ * @file main.c
+ * @brief Programa principal del Nodo 2.
+ * @details Lee el MPU6050, clasifica el estado del usuario y envía
+ * un paquete al Nodo 1 mediante ESP-NOW.
+ */
+
+/**
+ * @brief Inicializa el modo emisor ESP-NOW.
+ * @details Configura WiFi en STA, canal fijo y registra al Nodo 1 como peer.
+ */
+static void wifi_espnow_init_sender(void);
+
+/**
+ * @brief Callback de confirmación de envío ESP-NOW.
+ * @param tx_info Información del destino.
+ * @param status Resultado del envío.
+ */
+static void on_send_cb(const wifi_tx_info_t *tx_info, esp_now_send_status_t status);
+
+/**
+ * @brief Tarea principal del Nodo 2.
+ * @details Lee el MPU6050, ejecuta el detector de movimiento y transmite
+ * un paquete con estado y variables derivadas.
+ */
+static void task_send_pecho(void *pv);
+
+/**
+ * @file mpu6050.c
+ * @brief Driver del MPU6050.
+ * @details Implementa inicialización, lectura de registros y conversión
+ * de datos crudos a unidades físicas.
+ */
+
+/**
+ * @file motion_detector.c
+ * @brief Clasificador de estados de movimiento.
+ * @details Determina QUIETO, DE_PIE, ACOSTADO, CAMINANDO o CAIDA.
+ */
